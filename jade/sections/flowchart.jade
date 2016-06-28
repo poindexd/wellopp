@@ -1,0 +1,40 @@
+mixin feature(text, icon)
+	.col.s5
+		i.material-icons= icon
+		br
+		label= text
+
+.container
+	.row
+		+feature('Experts', 'school')
+		.col.s2
+			i.material-icons.grey-text.text-lighten-2 arrow_forward
+		+feature('Content', 'description')
+	.row
+		.col.s5
+			i.material-icons.grey-text.text-lighten-2 arrow_downward
+		.col.s5.offset-s2
+			i.material-icons.grey-text.text-lighten-2 arrow_downward
+	.row
+		+feature('Analysis', 'tune')
+		.col.s2
+			i.material-icons.grey-text.text-lighten-2 swap_horiz
+		+feature('Digital Discharge', 'tablet')
+
+	.row
+		+feature('EMR feed', 'equalizer')
+		.col.s2
+			i.material-icons.grey-text.text-lighten-2 arrow_forward
+		+feature('CareView Dashboard', 'timeline')
+
+	.row
+		+feature('Care Team', 'people')
+		.col.s2
+			i.material-icons.grey-text.text-lighten-2 arrow_forward
+		+feature('CareMessenger', 'mail_outline')
+
+	.row
+		+feature('Care Team', 'sentiment_very_satisfied')
+		.col.s2
+			i.material-icons.grey-text.text-lighten-2 arrow_forward
+		+feature('Patient Prize', 'card_giftcard')

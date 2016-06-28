@@ -1,0 +1,56 @@
+mixin skw-page(left)
+	.skw-page
+		.skw-page__half.skw-page__half--left
+			.skw-page__skewed(class=attributes.bg_class)
+				if left==true
+					.skw-page__content
+						block
+				else
+					.skw-page__content(style!=attributes.content_style)
+		.skw-page__half.skw-page__half--right
+			.skw-page__skewed(class=attributes.bg_class)
+				if left==false
+					.skw-page__content
+						block
+				else
+					.skw-page__content(style!=attributes.content_style)
+
+mixin icon_label(icon, label)
+	.col.s4.center
+		i.material-icons= icon
+		p= label
+
+section
+	.skw-pages(style='height: 50vh')
+
+		+skw-page(true)(content_style="background-image: url('/img/dd.jpg');background-position: 0% 30%", bg_class='green')
+			h3 Digital Discharge
+			.container: .row
+				+icon_label('school', 'Expert Content')
+				+icon_label('tablet', 'Educational Surveys')
+				+icon_label('timeline', 'Assess Risk')
+			a.btn.white.green-text Learn More
+
+		+skw-page(false)(content_style="background-image: url('/img/cv.jpg');background-position: 0% 25%", bg_class='purple')
+			h3 CareView Dashboard
+			.container: .row
+				+icon_label('equalizer', 'EMR Integration')
+				+icon_label('question_answer', 'Healthy Conversations')
+				+icon_label('people', 'Care Team')
+			a.btn.white.purple-text Learn More
+
+		+skw-page(true)(content_style="background-image: url('/img/cm2.jpg');background-position:100% 20%", bg_class='blue')
+			h3 Care Messenger
+			.container: .row
+				+icon_label('phone', 'Web & SMS')
+				+icon_label('question_answer', 'Customizable Messages')
+				+icon_label('people', 'Care Team')
+			a.btn.white.blue-text(href='http://google.com') Learn More
+
+		+skw-page(false)(content_style="background-image: url('/img/pp.jpg'); background-position: 50% 50%", bg_class='orange')
+			h3 Patient Prize
+			.container: .row
+				+icon_label('equalizer', 'EMR Integration')
+				+icon_label('question_answer', 'Healthy Conversations')
+				+icon_label('people', 'Care Team')
+			a.btn.white.orange-text Learn More

@@ -1,0 +1,93 @@
+@import 'materialize';
+@import 'base';
+@import 'skw-page';
+@import 'jquery.fullPage';
+@import 'testimonials';
+
+body{
+	color: white;
+	background: #0b222c;
+	opacity: 0;
+}
+
+#stats{
+	opacity: 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.card{
+	background: #0b222c;
+}
+
+.material-icons{
+	font-size: 40px;
+}
+
+.chart{
+  display: inline-block;
+  margin: 40px auto 20px;
+  padding: 0 10px;
+
+  span{
+  	font-size: 2em;
+  }
+  sup{
+  	font-size: 1.5em;
+  }
+}
+.easyPieChart {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+sup{
+  top: -0.2em;
+  margin-left: 1px;
+}
+
+.full-page{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skw-control{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  //flex-flow: column wrap;
+	position: absolute;
+	top: -24px;
+	left: 0px;
+	width: 100%;
+
+	.btn-floating{
+		margin: 0px 40px;
+		overflow: visible;
+		//background: #3D315B;
+		//padding: 10px;
+		&.active{
+			i{
+				color: #00bcd4;
+			}
+			background: #fff;
+			border-radius: 100%;
+		}
+	}
+
+}

@@ -1,0 +1,33 @@
+//- Documentation: http://rendro.github.io/easy-pie-chart/
+
+section#stats
+
+	//(style='background-image: url(http://website.wellopp.com/wp-content/uploads/2014/03/bg2a.jpg); background-size: cover; padding: 40px 0px 20px 0px')
+	.container
+		.row
+			.col.m3.s6: .card.center
+				.chart
+					.percentage(data-percent='10227' data-bar-color='transparent' data-track-color='transparent')
+						span 10227
+					p Surveys Taken
+
+			.col.m3.s6: .card.center
+				.chart
+					.percentage(data-percent='97', data-bar-color='green')
+						span 46
+						sup %
+					p Patient Satisfaction
+
+			.col.m3.s6: .card.center
+				.chart
+					.percentage(data-percent='75', data-bar-color='orange')
+						span 75
+						sup %
+					p Kittens Saved
+
+			.col.m3.s6: .card.center
+				.chart
+					.percentage(data-percent='46')
+						span 46
+						sup %
+					p Readmissions reduced

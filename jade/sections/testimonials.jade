@@ -1,0 +1,34 @@
+mixin testimonial(text, name, title)
+	li.cd-testimonials-item
+		p= text
+		.cd-author
+			img(src='/img/blah.png')
+			ul.cd-author-info
+				li= name
+				li= title
+
+mixin testimonials
+	+testimonial("Look! I just got the notification... It's like a friend from afar looking out for me :)", 'Louise', '71 Year Old Female Patient')
+	+testimonial("These are the questions that needed to be asked", 'Karen', '54 Year Old Female Patient')
+	+testimonial("You got any more of these? It's a good way to pass the time", 'Robert', '71 Year Old Male Patient')
+	+testimonial("I love this. Please keep bringing us more surveys. This is going to change the way we work for the better.", 'Kathy', 'Lead Pulmonary Nurse')
+	+testimonial("[Care Suggestions] allowed us to have a much richer dialogue about the issues [my patients] are facing.", 'Karen', 'Lead Social Worker')
+
+section(style='height: 50vh; background-image: url(http://website.wellopp.com/wp-content/uploads/2014/03/bg2a.jpg); background-size: cover;')
+	.cd-testimonials-wrapper.cd-container(style='position: absolute;top: 20px;left: 50%; transform: translate(-50%, 0%);')
+		ul.cd-testimonials
+			+testimonials
+		//a.cd-see-all(href='#') See All
+	.cd-testimonials-all
+		.cd-testimonials-all-wrapper
+			ul
+				+testimonials
+			a.close-btn(href='#')
+
+section.valign-wrapper(style='height: 50vh')
+	.container.center
+		h4 Patients and Care Managers 
+			i.material-icons.pink-text(style='vertical-align: middle') favorite
+			|  Digital Discharge
+		br
+		a.btn.cd-see-all(href='#') See More
